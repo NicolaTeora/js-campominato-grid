@@ -1,0 +1,11 @@
+.debug{
+    border: 2px dashed red;
+}
+
+.box{
+    width: 800px;
+    height: 800px;
+
+    border: 2px solid black;
+}
+
