@@ -17,4 +17,10 @@
     height: 10%;
 
     border: 1px solid black;
+
+    cursor: pointer;
+}
+
+.active.cell{
+    background-color: blue;
 }
