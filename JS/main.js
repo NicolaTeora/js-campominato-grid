@@ -3,7 +3,7 @@ const filedGrid = document.getElementById('field');
 
 //2-richiamo il bottone per riempire il contenitore
 const generatorCellBtn = document.getElementById('generator'); 
-
+let score = 0;
 //2.1- creo funzione per generare la griglia
 //2.2- argomento della funzione sarà il contenitore dove generare l'elemento
 generateCell(filedGrid);
@@ -38,14 +38,16 @@ function cellCreate(index){
     
     //4- creare la gestione del bottone
     cell.addEventListener('click', function(){
-        console.log(index)
+        console.log(index);
+        score++
         if (!bombElements.includes(index)){
             //4.1- tramite "toggle" dico all'elemento di aggiungere una classe o toglierla se presente
             cell.classList.toggle('active'); 
         } else {
             alert('BOOM!')
+            location.reload()
         }
-        
+        console.log(score)
     })
     return cell;
 }
